@@ -1,13 +1,95 @@
-<html>
-<head>
-</head>
-<body>
-  <script>
-    var hollerConfig = {
-      host: "http://127.0.0.1",
-      port: "8099"
-    }
-  </script>
-  <script type="text/javascript" src="../dist/holler-client.min.js"></script>
-</body>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>holler.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid top">
+      <div class="container-narrow">
+        <div class="jumbotron">
+          <h1>Holler.js</h1>
+          <p class="lead">real-time, in-app notifications for web and mobile via the command line</p>
+          <iframe src="http://player.vimeo.com/video/55331511?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+          <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">Download on GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid dark">
+      <div class="container-narrow">
+          <h1 class="sectionTitle"><span class="accent">1.</span> Set stuff up</h1>
+          <p>
+            Holler is built with <strong>Node</strong> and uses <strong>Faye</strong> for communication. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
+          </p>
+          <p>  
+<pre>npm install faye</pre>
+          </p>
+      </div>
+    </div>
+    <div class="container-fluid light">
+      <div class="container-narrow">
+          <h1 class="sectionTitle"><span class="accent">2.</span> Require some JS</h1>
+          <p>
+            On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
+          </p>
+          <p>
+<pre>&lt;script&gt;
+  var hollerConfig = {
+    host: "http://127.0.0.1",
+    port: "1337"
+  }
+&lt;/script&gt;
+&lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
+          </p>
+          <p>
+            <span class="label label-info">Heads up!</span> The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
+          </p>
+      </div>
+    </div>
+    <div class="container-fluid dark">
+      <div class="container-narrow">
+          <h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
+          <p>
+            The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
+          </p>
+          <p>  
+<pre>cd path/to/holler/src 
+node holler-server.js 1337</pre>
+          </p>
+      </div>
+    </div>
+    <div class="container-fluid light">
+      <div class="container-narrow">
+          <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
+          <p>    
+<pre>cd path/to/holler/src
+node holler.js http://yourServerUrl:port log "New software available in Downloads."</pre>
+          </p>
+      </div>
+    </div>
+    <script>
+      var hollerConfig = {
+        host: "http://127.0.0.1",
+        port: "8099"
+      }
+    </script>
+    <script type="text/javascript" src="../dist/holler-client.min.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".top").fitVids();
+      });
+    </script>
+  </body>
+</html>
