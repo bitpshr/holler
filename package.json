@@ -1,0 +1,8 @@
+{
+  "name": "holler",
+  "author": "Paul Bouchon (@bitpshr)",
+  "description": "real-time, in-app notifications for web and mobile via the command line",
+  "devDependencies": {
+    "grunt-contrib-mincss": "~0.3.2"
+  }
+}
