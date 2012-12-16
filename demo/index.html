@@ -15,18 +15,20 @@
     <![endif]-->
   </head>
   <body>
+
     <div class="container-fluid top">
       <div class="jumbotron">
-        <div class="container-really-narrow">
-          <h1>Holler.js</h1>
-        </div>
+        <h1>Holler.js</h1>
         <p class="lead">real-time, in-app notifications for web and mobile via the command line</p>
-        <p class="container-really-narrow hidden-phone">
+        <div class="container-really-narrow hidden-phone">
           <iframe src="http://player.vimeo.com/video/55331511?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen ></iframe> 
-        </p>
-        <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">Download on GitHub</a>
+        </div>
+        <div class="actionContainer">
+          <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">Download on GitHub</a>
+        </div>
       </div>
     </div>
+
     <div class="container-fluid dark">
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">1.</span> Set stuff up</h1>
@@ -38,6 +40,7 @@
         </p>
       </div>
     </div>
+
     <div class="container-fluid light">
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">2.</span> Require some JS</h1>
@@ -58,6 +61,7 @@
         </p>
       </div>
     </div>
+
     <div class="container-fluid dark">
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
@@ -70,12 +74,15 @@ node holler-server.js 1337</pre>
         </p>
       </div>
     </div>
+
     <div class="container-fluid light">
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
         <p>
           Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. 
         </p>
+        <p>
+          <span class="label label-success">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.
         <p>    
           <h3>Log Messages</h3>
           <img src="css/img/log.png" class="sample"/>
@@ -93,9 +100,25 @@ node holler-server.js 1337</pre>
         </p>
       </div>
     </div>
+
     <div class="footer">
-      Copyright
+      <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1355514129.html#_=1355674951974&amp;count=horizontal&amp;hashtags=javascript&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fbitpshr.info%2Fgitgraph%2F&amp;size=m&amp;text=GitHub%20participation%20graphs%20using%20canvas&amp;url=http%3A%2F%2Fbitpshr.info%2Fgitgraph&amp;via=bitpshr" class="twitter-share-button twitter-count-horizontal" style="width: 85px; height: 30px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+      <script type="text/javascript" async="" id="gauges-tracker" data-site-id="50b93314f5a1f55a5800000c" src="//secure.gaug.es/track.js"></script><script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <iframe class="stars" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=Gitgraph&amp;type=watch&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
+      <iframe class="forks" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=Gitgraph&amp;type=fork&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
+      <br>
+      <p>
+        Built by <a href="http://twitter.com/bitpshr">@bitpshr</a> under the <a href="http://sam.zoy.org/wtfpl/">WTFPL</a> license.
+      </p>
+      <p>
+        <a href=""><span>About</span></a>
+        <span class="divider">·</span>
+        <a href="https://github.com/bitpshr/holler/issues"><span>Issues</span></a>
+        <span class="divider">·</span>
+        <a href="http://twitter.com/bitpshr"><span>Contact</span></a>
+      </p>
     </div>
+
     <script>
       var hollerConfig = {
         host: "http://127.0.0.1",
