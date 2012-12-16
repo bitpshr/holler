@@ -3,9 +3,9 @@
 // description  : Connects to a Faye server & subscribes to notifications
 // 
 
-
 (function (args) {
-  // grab host & port
+
+  // grab host & port off config obj
   var h     = window.hollerConfig,
       port  = h && h.port ? h.port : "1337",
       host  = h && h.host ? h.host : "http://127.0.0.1";
@@ -47,4 +47,5 @@
       alertify.log(obj.message, obj.type);
     });
   });
+
 }(this));

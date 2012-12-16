@@ -1,3 +1,8 @@
+// 
+// name         : holler-server.js
+// description  : Starts a Faye server for notifications
+// 
+
 // make sure we have only one arg
 if(process.argv.length>3){
   console.error("usage: node holler-server.js [port]");
