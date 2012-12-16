@@ -6,14 +6,20 @@ module.exports = function(grunt) {
     lint: {
       files: ['src/*.js']
     },
+    concat: {
+      dist: {
+        src: ['src/alertify.js', 'src/holler-client.js'],
+        dest: 'dist/<%= pkg.name %>-client.concat.js'
+      }
+    },
     min: {
       dist: {
-        src: ['src/holler-client.js'],
+        src: '<%= concat.dist.dest %>',
         dest: 'dist/<%= pkg.name %>-client.min.js'
       }
     }
   });
 
-  grunt.registerTask('default', ['lint', 'min']);
+  grunt.registerTask('default', ['lint', 'concat', 'min']);
 
 };

@@ -19,7 +19,7 @@ if(type!="log" && type!="success" && type!="error"){
 
 // 2. create a regular old client just like a browser would
 var client = new faye.Client(url+'/faye');
-var notification = client.publish('/telepathy', {
+var notification = client.publish('/holler', {
   type: type,
   message: process.argv[4]
 });
