@@ -35,18 +35,21 @@ node holler-server.js 1337
 Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy.
 * Log Messages
 
+![](http://bitpshr.info/holler/css/img/log.png)
 ```console
 node holler.js http://yourServerUrl:port log "This is a standard log message."
 ```
 
 * Success Messages
 
+![](http://bitpshr.info/holler/css/img/success.png)
 ```console
 node holler.js http://yourServerUrl:port success "This is a success message."
 ```
 
 * Error Messages
 
+![](http://bitpshr.info/holler/css/img/error.png)
 ```console
 node holler.js http://yourServerUrl:port error "This is an error message."
 ```
