@@ -16,33 +16,35 @@
   </head>
   <body>
     <div class="container-fluid top">
-      <div class="container-narrow">
-        <div class="jumbotron">
+      <div class="jumbotron">
+        <div class="container-really-narrow">
           <h1>Holler.js</h1>
-          <p class="lead">real-time, in-app notifications for web and mobile via the command line</p>
-          <iframe src="http://player.vimeo.com/video/55331511?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
-          <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">Download on GitHub</a>
         </div>
+        <p class="lead">real-time, in-app notifications for web and mobile via the command line</p>
+        <p class="container-really-narrow hidden-phone">
+          <iframe src="http://player.vimeo.com/video/55331511?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen ></iframe> 
+        </p>
+        <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">Download on GitHub</a>
       </div>
     </div>
     <div class="container-fluid dark">
       <div class="container-narrow">
-          <h1 class="sectionTitle"><span class="accent">1.</span> Set stuff up</h1>
-          <p>
-            Holler is built with <strong>Node</strong> and uses <strong>Faye</strong> for communication. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
-          </p>
-          <p>  
+        <h1 class="sectionTitle"><span class="accent">1.</span> Set stuff up</h1>
+        <p>
+          Holler is built with <a href="http://nodejs.org/">Node</a>, uses <a href="http://faye.jcoglan.com/">Faye</a> for communication, and uses <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> for notifications. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
+        </p>
+        <p>  
 <pre>npm install faye</pre>
-          </p>
+        </p>
       </div>
     </div>
     <div class="container-fluid light">
       <div class="container-narrow">
-          <h1 class="sectionTitle"><span class="accent">2.</span> Require some JS</h1>
-          <p>
-            On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
-          </p>
-          <p>
+        <h1 class="sectionTitle"><span class="accent">2.</span> Require some JS</h1>
+        <p>
+          On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
+        </p>
+        <p>
 <pre>&lt;script&gt;
   var hollerConfig = {
     host: "http://127.0.0.1",
@@ -50,32 +52,49 @@
   }
 &lt;/script&gt;
 &lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
-          </p>
-          <p>
-            <span class="label label-info">Heads up!</span> The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
-          </p>
+        </p>
+        <p>
+          <span class="label label-info">Heads up!</span> The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
+        </p>
       </div>
     </div>
     <div class="container-fluid dark">
       <div class="container-narrow">
-          <h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
-          <p>
-            The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
-          </p>
-          <p>  
+        <h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
+        <p>
+          The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
+        </p>
+        <p>  
 <pre>cd path/to/holler/src 
 node holler-server.js 1337</pre>
-          </p>
+        </p>
       </div>
     </div>
     <div class="container-fluid light">
       <div class="container-narrow">
-          <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
-          <p>    
-<pre>cd path/to/holler/src
-node holler.js http://yourServerUrl:port log "New software available in Downloads."</pre>
-          </p>
+        <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
+        <p>
+          Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. 
+        </p>
+        <p>    
+          <h3>Log Messages</h3>
+          <img src="css/img/log.png" class="sample"/>
+<pre>node holler.js http://yourServerUrl:port log "This is a standard log message."</pre>
+        </p>
+        <p>    
+          <h3>Success Messages</h3>
+          <img src="css/img/success.png" class="sample"/>
+<pre>node holler.js http://yourServerUrl:port success "This is a success message."</pre>
+        </p>
+        <p>    
+          <h3>Error Messages</h3>
+          <img src="css/img/error.png" class="sample"/>
+<pre>node holler.js http://yourServerUrl:port error "This is an error message."</pre>
+        </p>
       </div>
+    </div>
+    <div class="footer">
+      Copyright
     </div>
     <script>
       var hollerConfig = {

@@ -1,20 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700);
 
 body {
-  padding-bottom: 40px;
+
 }
 
 .download {
-  margin-top:35px;
+  margin-top:70px;
 }
 
 .container-narrow {
   margin: 0 auto;
   max-width: 700px;
+  padding:0px 10px;
+}
+
+.lead{
+  margin-bottom:0px !important;
+}
+
+.container-really-narrow {
+  max-width: 500px !important;
+  margin: 0px auto;
 }
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+.sample{
+  margin-bottom:15px;
+}
+
+iframe{
+  margin-top:30px;
+  margin-bottom:20px;
+  display:block;
 }
 
 .row-fluid{
@@ -36,8 +57,8 @@ body {
 
 .top h1{
   color:#FFF;
-  font-family: 'Righteous', cursive;
-  font-size:180px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:130px;
   display:block;
   margin-bottom:15px;
   line-height:1;
@@ -45,12 +66,17 @@ body {
 }
 
 .top p{
-  color:#999;
-  text-shadow: -1px -1px 0px #333;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-family: 'Source Sans Pro';
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 53.75px;
+  text-shadow: -1px -1px 0px #222;
 }
 
 .jumbotron {
-  margin: 40px 0;
+  margin: 20px 0;
   text-align: center;
 }
 .jumbotron .btn {
@@ -69,6 +95,13 @@ body {
   margin-top:25px;
 }
 
+h3{
+  font-family: Georgia, Times New Roman, serif !important;
+  font-weight: normal;
+  font-style: italic;
+  color:#777;
+}
+
 .accent{
   color: #FF7F00;
   font-weight:bold;
@@ -77,7 +110,8 @@ body {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body{
-    padding:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
   }
 
   .top{
@@ -96,7 +130,8 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   body{
-    padding:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
   }
 
   .top{
