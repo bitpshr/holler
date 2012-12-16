@@ -112,6 +112,7 @@ h3{
 }
 
 .footer{
+  border-top:3px solid orange;
   background:#282828;
   color:#DDD;
   font-family: 'Source Sans Pro', sans-serif;

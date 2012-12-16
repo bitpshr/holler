@@ -31,7 +31,7 @@
 
     <div class="container-fluid dark">
       <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">1.</span> Set stuff up</h1>
+        <h1 class="sectionTitle"><span class="accent">1.</span> Install a module</h1>
         <p>
           Holler is built with <a href="http://nodejs.org/">Node</a>, uses <a href="http://faye.jcoglan.com/">Faye</a> for communication, and uses <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> for notifications. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
         </p>
@@ -43,7 +43,7 @@
 
     <div class="container-fluid light">
       <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">2.</span> Require some JS</h1>
+        <h1 class="sectionTitle"><span class="accent">2.</span> Add a script tag</h1>
         <p>
           On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
         </p>
@@ -79,10 +79,8 @@ node holler-server.js 1337</pre>
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
         <p>
-          Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. 
+          Show notifications to <strong>all users currently using your app in real-time</strong> using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. 
         </p>
-        <p>
-          <span class="label label-success">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.
         <p>    
           <h3>Log Messages</h3>
           <img src="css/img/log.png" class="sample"/>
@@ -97,6 +95,9 @@ node holler-server.js 1337</pre>
           <h3>Error Messages</h3>
           <img src="css/img/error.png" class="sample"/>
 <pre>node holler.js http://yourServerUrl:port error "This is an error message."</pre>
+        </p>
+        <p>
+          <span class="label label-success">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.
         </p>
       </div>
     </div>
