@@ -5,6 +5,11 @@ body {
 
 }
 
+.footer iframe{
+  width:85px !important;
+  height:30px !important;
+}
+
 .row-fluid{
   margin-bottom:30px;
 }
