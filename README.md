@@ -1,17 +1,62 @@
-features:
-1. security, make sure script is only run from same host thats being targeted (just grab curr host and use it always)
-2. clean up how script will be run...is node ok?
-3. clean up and make generic the script include
-4. alertify submodule, nice build script, etc.
+[Holler.js](http://bitpshr.info/holler)
+=================
 
 real-time, in-app notifications for web and mobile via the command line
 
-three steps:
+##Usage
+Sending notifications with Holler is as easy as four steps:
 
-1. install node, install faye
-2. paste script tags before closing body tag
-3. run server on some port
-4. holler some stuff at your users
+###1. Install a module
+Holler is built with <a href="http://nodejs.org/">Node</a>, uses <a href="http://faye.jcoglan.com/">Faye</a> for communication, and uses <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> for notifications. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
+```console
+npm install faye
+```
+
+###2. Add a script tag
+On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
+```html
+<script>
+      var hollerConfig = {
+        host: "http://127.0.0.1",
+        port: "1337"
+      }
+</script>
+<script type="text/javascript" src="PATH/TO/holler-client.min.js"></script>
+```
+
+###3. Start a server
+The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
+```console
+cd path/to/holler/src 
+node holler-server.js 1337
+```
+
+###4. Holler stuff
+Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy.
+* Log Messages
+
+```console
+node holler.js http://yourServerUrl:port log "This is a standard log message."
+```
+
+* Success Messages
+
+```console
+node holler.js http://yourServerUrl:port success "This is a success message."
+```
+
+* Error Messages
+
+```console
+node holler.js http://yourServerUrl:port error "This is an error message."
+```
+
+##Going forward
+I definitely need to address the following:
+
+* Security: need a way to lock down notifications so that only auth'd users can send them
+* Simplicity: need a way to simplify the holler.js command (it's ugly to pass in 3 options)
 
 
-say shit to everyone in your app at once using the command line, in real-time
+##License
+[WTFPL](http://sam.zoy.org/wtfpl/)
