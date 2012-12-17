@@ -7,7 +7,7 @@ real-time, in-app notifications for web and mobile via the command line. [see it
 Sending notifications with Holler is as easy as four steps:
 
 ###1. Install a module
-Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install holler:
+Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. Next we just install holler:
 ```console
 npm install holler
 ```

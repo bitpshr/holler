@@ -1,6 +1,6 @@
 {
   "name": "holler",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Paul Bouchon (@bitpshr)",
   "description": "real-time, in-app notifications for web and mobile via the command line",
   "homepage": "http://bitpshr.info/holler",
