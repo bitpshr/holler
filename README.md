@@ -1,7 +1,7 @@
 [Holler.js](http://bitpshr.info/holler)
 =================
 
-real-time, in-app notifications for web and mobile via the command line
+real-time, in-app notifications for web and mobile via the command line. [see it in action](https://vimeo.com/55747016)
 
 ##Usage
 Sending notifications with Holler is as easy as four steps:
