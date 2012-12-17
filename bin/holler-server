@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // 
 // name         : holler-server.js
 // description  : Starts a Faye server for notifications

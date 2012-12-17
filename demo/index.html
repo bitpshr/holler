@@ -34,10 +34,10 @@
       <div class="container-narrow">
         <h1 class="sectionTitle"><span class="accent">1.</span> Install a module</h1>
         <p>
-          Holler is built with <a href="http://nodejs.org/">Node</a>, uses <a href="http://faye.jcoglan.com/">Faye</a> for communication, and uses <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> for notifications. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
+          Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install holler:
         </p>
         <p>  
-<pre>npm install faye</pre>
+<pre>npm install holler</pre>
         </p>
       </div>
     </div>
@@ -70,8 +70,7 @@
           The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
         </p>
         <p>  
-<pre>cd path/to/holler/src 
-node holler-server.js 1337</pre>
+<pre>holler-server 1337</pre>
         </p>
       </div>
     </div>
@@ -85,17 +84,17 @@ node holler-server.js 1337</pre>
         <p>    
           <h3>Log Messages</h3>
           <img src="css/img/log.png" class="sample"/>
-<pre>node holler.js http://yourServerUrl:port log "This is a standard log message."</pre>
+<pre>holler http://yourServerUrl:port log "This is a standard log message."</pre>
         </p>
         <p>    
           <h3>Success Messages</h3>
           <img src="css/img/success.png" class="sample"/>
-<pre>node holler.js http://yourServerUrl:port success "This is a success message."</pre>
+<pre>holler http://yourServerUrl:port success "This is a success message."</pre>
         </p>
         <p>    
           <h3>Error Messages</h3>
           <img src="css/img/error.png" class="sample"/>
-<pre>node holler.js http://yourServerUrl:port error "This is an error message."</pre>
+<pre>holler http://yourServerUrl:port error "This is an error message."</pre>
         </p>
         <p>
           <span class="label label-success">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.

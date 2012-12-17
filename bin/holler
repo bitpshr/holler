@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // 
 // name         : holler.js
 // description  : real-time, in-app notifications from the command line
