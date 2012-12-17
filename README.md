@@ -7,9 +7,9 @@ real-time, in-app notifications for web and mobile via the command line. [see it
 Sending notifications with Holler is as easy as four steps:
 
 ###1. Install a module
-Holler is built with <a href="http://nodejs.org/">Node</a>, uses <a href="http://faye.jcoglan.com/">Faye</a> for communication, and uses <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> for notifications. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install Faye:
+Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. After doing so, the <code>npm</code> command should be available via the command line. Then we just install holler:
 ```console
-npm install faye
+npm install holler
 ```
 
 ###2. Add a script tag
@@ -26,9 +26,8 @@ On the client, Holler can be easily configured to use a specific host and port r
 
 ###3. Start a server
 The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
-```console
-cd path/to/holler/src 
-node holler-server.js 1337
+```console 
+holler-server 1337
 ```
 
 ###4. Holler stuff
@@ -37,21 +36,21 @@ Show notifications to all users currently using your app in real-time using <cod
 
 ![](http://bitpshr.info/holler/css/img/log.png)
 ```console
-node holler.js http://yourServerUrl:port log "This is a standard log message."
+holler http://yourServerUrl:port log "This is a standard log message."
 ```
 
 * Success Messages
 
 ![](http://bitpshr.info/holler/css/img/success.png)
 ```console
-node holler.js http://yourServerUrl:port success "This is a success message."
+holler http://yourServerUrl:port success "This is a success message."
 ```
 
 * Error Messages
 
 ![](http://bitpshr.info/holler/css/img/error.png)
 ```console
-node holler.js http://yourServerUrl:port error "This is an error message."
+holler http://yourServerUrl:port error "This is an error message."
 ```
 
 ##Going forward
