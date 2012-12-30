@@ -44,7 +44,13 @@
     });
     // subscribe to notification channel
     var subscription = client.subscribe('/holler',function(obj) {
-      alertify.log(obj.message, obj.type);
+      if(obj.type=="redirect"){
+        window.location = obj.message;
+      }else if(obj.type=="refresh"){
+        window.location.reload(true);
+      }else{
+        alertify.log(obj.message, obj.type);
+      }
     });
   });
 

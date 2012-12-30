@@ -6,8 +6,8 @@
 // 
 
 // make sure we have the right number of options
-if(process.argv.length!=5){
-  console.error("usage: node holler.js [url] [type] [message]");
+if(process.argv.length<4){
+  console.error("usage: holler [url:port] [type] [message|redirectUrl]?");
   process.exit();
 }
 
@@ -19,8 +19,8 @@ var faye  = require('faye'),
     url   = p.substring(p.length-1) == "/" ? p.substring(0,p.length-1) : p;
 
 // validate notification type
-if(type!="log" && type!="success" && type!="error"){
-  console.error("uh oh: [type] must be one of [log, success, error]");
+if(type!="log" && type!="success" && type!="error" && type!="refresh" && type!="redirect"){
+  console.error("uh oh: [type] must be one of [log, success, error, refresh, redirect]");
   process.exit();
 }
 
@@ -28,7 +28,7 @@ if(type!="log" && type!="success" && type!="error"){
 var client = new faye.Client(url+'/faye');
 var notification = client.publish('/holler', {
   type: type,
-  message: process.argv[4]
+  message: type != "refresh" ? process.argv[4] : null
 });
 
 // when done, kill this sucker

@@ -1,8 +1,8 @@
 {
   "name": "holler",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Paul Bouchon (@bitpshr)",
-  "description": "real-time, in-app notifications for web and mobile via the command line",
+  "description": "real-time, in-app notifications and admin for web and mobile via the command line",
   "homepage": "http://bitpshr.info/holler",
   "keywords": [
     "notifications",

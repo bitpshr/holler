@@ -7,7 +7,7 @@
 
 // make sure we have only one arg
 if(process.argv.length>3){
-  console.error("usage: node holler-server.js [port]");
+  console.error("usage: holler-server [port]");
   process.exit();
 }
 

@@ -1,7 +1,7 @@
 [Holler.js](http://bitpshr.info/holler)
 =================
 
-real-time, in-app notifications for web and mobile via the command line. [see it in action](http://bitpshr.info/holler)
+real-time, in-app notifications and admin for web and mobile via the command line. [see it in action](http://bitpshr.info/holler)
 
 ##Usage
 Sending notifications with Holler is as easy as four steps:
@@ -9,7 +9,7 @@ Sending notifications with Holler is as easy as four steps:
 ###1. Install a module
 Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. Next we just install holler:
 ```console
-npm install holler
+npm install holler -g
 ```
 
 ###2. Add a script tag
@@ -51,6 +51,20 @@ holler http://yourServerUrl:port success "This is a success message."
 ![](http://bitpshr.info/holler/css/img/error.png)
 ```console
 holler http://yourServerUrl:port error "This is an error message."
+```
+
+* Refresh Page
+
+Now you can use holler to perform admin tasks such as refreshing the current page. Again, all users using the app will have their page refreshed in real-time.
+```console
+holler http://yourServerUrl:port refresh
+```
+
+* Error Messages
+
+You can also redirect the current page to a new url. Again, all users using the app will have their page redirected in real-time.
+```console
+holler http://yourServerUrl:port redirect http://someOtherUrl
 ```
 
 ##Going forward
