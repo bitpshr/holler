@@ -7,9 +7,9 @@
     <meta name="description" content="real-time, in-app notifications and admin for web and mobile via the command line">
     <meta name="author" content="Paul Bouchon">
     <title>holler.js</title>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -133,10 +133,17 @@
         <a href="http://twitter.com/bitpshr"><span>Contact</span></a>
       </p>
     </div>
-    <script src="alertify.min.js"></script>
+    <script src="../vendor/alertify/lib/alertify.min.js"></script>
     <script>
       setTimeout('alertify.log("New Features! Refresh current page or redirect to new url for all users in real-time via command line.");',1500);
     </script>
+    <script>
+	  var hollerConfig = {
+	    host: "http://127.0.0.1",
+	    port: "1337"
+	  }
+	</script>
+	<script type="text/javascript" src="../dist/holler-client.min.js"></script>
     <script type="text/javascript">
       var _gauges = _gauges || [];
       (function() {

@@ -67,12 +67,20 @@ You can also redirect the current page to a new url. Again, all users using the 
 holler http://yourServerUrl:port redirect http://someOtherUrl
 ```
 
-##Going forward
-I definitely need to address the following:
+##Contributing
+Holler.js uses [Grunt](http://gruntjs.com) for file linting and uglification. To start contributing, first make sure [node](http://nodejs.org) is installed. Then:
 
-* Security: need a way to lock down notifications so that only auth'd users can send them
-* Simplicity: need a way to simplify the holler.js command (it's ugly to pass in 3 options)
-
+```bash
+git clone https://github.com/bitpshr/holler.git && cd holler
+git submodules update --recursive --init
+cd vendor/bootstrap && npm install && make bootstrap && cd ..
+npm install
+# start a server at localhost (e.g. http://127.0.0.1)
+holler-server
+# view demo.html in a browser
+# send a log message
+holler http://127.0.0.1:1337 log "foobar"
+```
 
 ##License
 [WTFPL](http://sam.zoy.org/wtfpl/)
