@@ -8,6 +8,7 @@
     <meta name="author" content="Paul Bouchon">
     <title>holler.js</title>
     <link href="../vendor/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/themes/holler.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
     <link href="../vendor/bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -44,7 +45,13 @@
 
     <div class="container-fluid light">
       <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">2.</span> Add a script tag</h1>
+        <h1 class="sectionTitle"><span class="accent">2.</span> Include holler</h1>
+        <p>
+          <span class="label label-info">New!</span> Be sure to include the <code>holler.css</code> stylesheet as of v1.9.0:
+        </p>
+        <p>
+<pre>&lt;link href="PATH/TO/holler.css" rel="stylesheet"/&gt;</pre>
+        </p>
         <p>
           On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
         </p>
@@ -58,7 +65,7 @@
 &lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
         </p>
         <p>
-          <span class="label label-info">Heads up!</span> The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
+          The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
         </p>
       </div>
     </div>

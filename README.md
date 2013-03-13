@@ -12,7 +12,13 @@ Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as
 npm install holler -g
 ```
 
-###2. Add a script tag
+###2. Include Holler
+
+**New!** Be sure to include the <code>holler.css</code> stylesheet as of v1.9.0:
+```html
+<link href="PATH/TO/holler/css" rel="stylesheet"/>
+```
+
 On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
 ```html
 <script>

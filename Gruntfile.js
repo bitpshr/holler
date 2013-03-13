@@ -18,6 +18,16 @@ module.exports = function(grunt) {
 				src: '<%= concat.dist.dest %>',
      	   		dest: 'dist/<%= pkg.name %>-client.min.js'
 			}
+		},
+		cssmin: {
+			compress: {
+				files: {
+			  		'dist/themes/<%= pkg.name %>.css': [
+			  			'vendor/alertify/themes/alertify.core.css', 
+			  			'vendor/alertify/themes/alertify.bootstrap.css'
+			  		]
+				}
+			}
 		}
 	});
 
@@ -25,8 +35,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	// Default task(s).
-	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
 
 };
