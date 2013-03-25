@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Paul Bouchon -- author -- @bitpshr
+
+# THANKS
+
+    https://github.com/h5bp/html5-boilerplate
+
+# TECHNOLOGY COLOPHON
+	Node
+	Faye
+	Alertify
+	Bootstrap
+	HTML5
+   	CSS3 (Stylus)
+    Modernizr
+    Grunt

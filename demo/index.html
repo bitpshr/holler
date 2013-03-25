@@ -1,169 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta lang="en">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="real-time, in-app notifications and admin for web and mobile via the command line">
-    <meta name="author" content="Paul Bouchon">
-    <title>holler.js</title>
-    <link href="../vendor/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../dist/themes/holler.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <link href="../vendor/bootstrap/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>holler.js</title>
+        <meta name="author" content="Paul Bouchon (@bitpshr)">
+       	<meta name="description" content="real-time, in-app notifications and admin for web and mobile via the command line">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="container-fluid top">
-      <div class="jumbotron">
-        <h1>Holler.js</h1>
-        <p class="lead">real-time, in-app notifications and admin for web and mobile via the command line</p>
-        <div class="container-really-narrow hidden-phone">
-          <iframe src="http://player.vimeo.com/video/55747016?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen ></iframe> 
-        </div>
-        <div class="actionContainer">
-          <a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">View on GitHub</a>
-        </div>
-      </div>
-    </div>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Righteous' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="styles/app.css">
+        <link href="../dist/themes/holler.css" rel="stylesheet">
 
-    <div class="container-fluid dark">
-      <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">1.</span> Install a module</h1>
-        <p>
-          Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. Next we just install holler:
-        </p>
-        <p>  
-<pre>npm install holler</pre>
-        </p>
-      </div>
-    </div>
+        <script src="vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <![endif]-->
+            <div class="container-fluid top">
+            	<div class="jumbotron">
+            		<h1>Holler.js</h1>
+            		<p class="lead">real-time, in-app notifications and admin for web and mobile via the command line</p>
+            		<div class="container-really-narrow hidden-phone">
+            			<iframe src="http://player.vimeo.com/video/55747016?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen ></iframe> 
+            		</div>
+            		<div class="actionContainer">
+            			<a class="download btn btn-large btn-success" href="https://github.com/bitpshr/holler">View on GitHub</a>
+            		</div>
+            	</div>
+            </div>
 
-    <div class="container-fluid light">
-      <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">2.</span> Include holler</h1>
-        <p>
-          <span class="label label-info">New!</span> Be sure to include the <code>holler.css</code> stylesheet as of v1.9.0:
-        </p>
-        <p>
-<pre>&lt;link href="PATH/TO/holler.css" rel="stylesheet"/&gt;</pre>
-        </p>
-        <p>
-          On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
-        </p>
-        <p>
-<pre>&lt;script&gt;
-  var hollerConfig = {
-    host: "http://127.0.0.1",
-    port: "1337"
-  }
-&lt;/script&gt;
-&lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
-        </p>
-        <p>
-          The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
-        </p>
-      </div>
-    </div>
+            <div class="container-fluid dark">
+            	<div class="container-narrow">
+            		<h1 class="sectionTitle"><span class="accent">1.</span> Install a module</h1>
+            		<p>
+            			Holler is built with <a href="http://nodejs.org/">Node</a> and is distributed as an <a href="http://npmjs.org">npm</a> module. If you don't have Node yet, <a href="http://nodejs.org/">install the hell out of it</a>. Next we just install holler:
+            		</p>
+            		<p>  
+            			<pre>npm install holler</pre>
+            		</p>
+            	</div>
+            </div>
 
-    <div class="container-fluid dark">
-      <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
-        <p>
-          The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
-        </p>
-        <p>  
-<pre>holler-server 1337</pre>
-        </p>
-      </div>
-    </div>
+            <div class="container-fluid light">
+            	<div class="container-narrow">
+            		<h1 class="sectionTitle"><span class="accent">2.</span> Include holler</h1>
+            		<p>
+            			<span class="label label-info">New!</span> Be sure to include the <code>holler.css</code> stylesheet as of v1.9.0:
+            		</p>
+            		<p>
+            			<pre>&lt;link href="PATH/TO/holler.css" rel="stylesheet"/&gt;</pre>
+            		</p>
+            		<p>
+            			On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
+            		</p>
+            		<p>
+            			<pre>&lt;script&gt;
+            				var hollerConfig = {
+            				host: "http://127.0.0.1",
+            				port: "1337"
+            			}
+            			&lt;/script&gt;
+            			&lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
+            		</p>
+            		<p>
+            			The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
+            		</p>
+            	</div>
+            </div>
 
-    <div class="container-fluid light">
-      <div class="container-narrow">
-        <h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
-        <p>
-          Show notifications to <strong>all users currently using your app in real-time</strong> using <code>holler</code>. You can also refresh the current page, or redirect to a new url. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. <a href="https://vimeo.com/55747016">See it in action</a>.
-        </p> 
-        <p>
-          <span class="label label-info">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.
-        </p>
-        <p>    
-          <h3>Log Messages</h3>
-          <img src="css/img/log.png" class="sample"/>
-<pre>holler http://yourServerUrl:port log "This is a standard log message."</pre>
-        </p>
-        <p>    
-          <h3>Success Messages</h3>
-          <img src="css/img/success.png" class="sample"/>
-<pre>holler http://yourServerUrl:port success "This is a success message."</pre>
-        </p>
-        <p>    
-          <h3>Error Messages</h3>
-          <img src="css/img/error.png" class="sample"/>
-<pre>holler http://yourServerUrl:port error "This is an error message."</pre>
-        </p>
-        <p>    
-          <h3>Refresh Page</h3>
-          <p>
-            <span class="label label-success">New!</span> Now you can use holler to perform admin tasks such as refreshing the current page. Again, all users using the app will have their page refreshed in real-time.
-          </p>
-<pre>holler http://yourServerUrl:port refresh</pre>
-        </p>
-        <p>    
-          <h3>Redirect to URL</h3>
-          <p>
-            <span class="label label-success">New!</span> You can also redirect the current page to a new url. Again, all users using the app will have their page redirected in real-time.
-          </p>
-<pre>holler http://yourServerUrl:port redirect http://someOtherUrl</pre>
-        </p>
-      </div>
-    </div>
+            <div class="container-fluid dark">
+            	<div class="container-narrow">
+            		<h1 class="sectionTitle"><span class="accent">3.</span> Start a server</h1>
+            		<p>
+            			The server can be started with an optional port. If no port is specified, it will be defaulted to 1337.
+            		</p>
+            		<p>  
+            			<pre>holler-server 1337</pre>
+            		</p>
+            	</div>
+            </div>
 
-    <div class="footer">
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bitpshr.info/holler" data-text="holler.js - real-time notifications for web / mobile via the command line" data-via="bitpshr" data-hashtags="javascript,websockets,nodejs">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      <iframe class="stars" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=holler&amp;type=watch&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
-      <iframe class="forks" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=holler&amp;type=fork&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
-      <br>
-      <p>
-        Built by <a href="http://twitter.com/bitpshr">@bitpshr</a> under the <a href="http://sam.zoy.org/wtfpl/">WTFPL</a> license.
-      </p>
-      <p>
-        <a href=""><span>About</span></a>
-        <span class="divider">·</span>
-        <a href="https://github.com/bitpshr/holler/issues"><span>Issues</span></a>
-        <span class="divider">·</span>
-        <a href="http://twitter.com/bitpshr"><span>Contact</span></a>
-      </p>
-    </div>
-    <script src="../vendor/alertify/lib/alertify.min.js"></script>
-    <script>
-      setTimeout('alertify.log("New Features! Refresh current page or redirect to new url for all users in real-time via command line.");',1500);
-    </script>
-    <script>
-	  var hollerConfig = {
-	    host: "http://127.0.0.1",
-	    port: "1337"
-	  }
-	</script>
-	<script type="text/javascript" src="../dist/holler-client.min.js"></script>
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '50ce90b2f5a1f566e7000009');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-    
-  </body>
+            <div class="container-fluid light">
+            	<div class="container-narrow">
+            		<h1 class="sectionTitle"><span class="accent">4.</span> Holler stuff</h1>
+            		<p>
+            			Show notifications to <strong>all users currently using your app in real-time</strong> using <code>holler</code>. You can also refresh the current page, or redirect to a new url. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy. <a href="https://vimeo.com/55747016">See it in action</a>.
+            		</p> 
+            		<p>
+            			<span class="label label-info">Try this!</span> Open up multiple browser windows all pointing to your test page. All windows should receive the notification in real-time.
+            		</p>
+            		<p>    
+            			<h3>Log Messages</h3>
+            			<img src="img/log.png" class="sample"/>
+            			<pre>holler http://yourServerUrl:port log "This is a standard log message."</pre>
+            		</p>
+            		<p>    
+            			<h3>Success Messages</h3>
+            			<img src="img/success.png" class="sample"/>
+            			<pre>holler http://yourServerUrl:port success "This is a success message."</pre>
+            		</p>
+            		<p>    
+            			<h3>Error Messages</h3>
+            			<img src="img/error.png" class="sample"/>
+            			<pre>holler http://yourServerUrl:port error "This is an error message."</pre>
+            		</p>
+            		<p>    
+            			<h3>Refresh Page</h3>
+            			<p>
+            				<span class="label label-success">New!</span> Now you can use holler to perform admin tasks such as refreshing the current page. Again, all users using the app will have their page refreshed in real-time.
+            			</p>
+            			<pre>holler http://yourServerUrl:port refresh</pre>
+            		</p>
+            		<p>    
+            			<h3>Redirect to URL</h3>
+            			<p>
+            				<span class="label label-success">New!</span> You can also redirect the current page to a new url. Again, all users using the app will have their page redirected in real-time.
+            			</p>
+            			<pre>holler http://yourServerUrl:port redirect http://someOtherUrl</pre>
+            		</p>
+            	</div>
+            </div>
+
+            <div class="footer">
+            	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bitpshr.info/holler" data-text="holler.js - real-time notifications for web / mobile via the command line" data-via="bitpshr" data-hashtags="javascript,websockets,nodejs">Tweet</a>
+            	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            	<iframe class="stars" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=holler&amp;type=watch&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
+            	<iframe class="forks" src="http://bitpshr.info/cdn/github-btn.html?user=bitpshr&amp;repo=holler&amp;type=fork&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="30px"></iframe>
+            	<br>
+            	<p>
+            		Built by <a href="http://twitter.com/bitpshr">@bitpshr</a> under the <a href="http://sam.zoy.org/wtfpl/">WTFPL</a> license.
+            	</p>
+            	<p>
+            		<a href=""><span>About</span></a>
+            		<span class="divider">·</span>
+            		<a href="https://github.com/bitpshr/holler/issues"><span>Issues</span></a>
+            		<span class="divider">·</span>
+            		<a href="http://twitter.com/bitpshr"><span>Contact</span></a>
+            	</p>
+            </div>
+            <script src="../vendor/alertify/lib/alertify.min.js"></script>
+            <script>
+            setTimeout('alertify.log("New Features! Refresh current page or redirect to new url for all users in real-time via command line.");',1500);
+            </script>
+            <script>
+            var hollerConfig = {
+            	host: "http://127.0.0.1",
+            	port: "1337"
+            }
+            </script>
+            <script type="text/javascript" src="../dist/holler-client.min.js"></script>
+            <script type="text/javascript">
+            var _gauges = _gauges || [];
+            (function() {
+            	var t   = document.createElement('script');
+            	t.type  = 'text/javascript';
+            	t.async = true;
+            	t.id    = 'gauges-tracker';
+            	t.setAttribute('data-site-id', '50ce90b2f5a1f566e7000009');
+            	t.src = '//secure.gaug.es/track.js';
+            	var s = document.getElementsByTagName('script')[0];
+            	s.parentNode.insertBefore(t, s);
+            })();
+            </script>
+        </body>
 </html>
