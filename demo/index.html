@@ -61,13 +61,13 @@
             			On the client, Holler can be easily configured to use a specific host and port regardless of the app's http server. This is done via a global <code>hollerConfig</code> object. The <code>holler-client.js</code> script tag should then be included:
             		</p>
             		<p>
-            			<pre>&lt;script&gt;
-            				var hollerConfig = {
-            				host: "http://127.0.0.1",
-            				port: "1337"
-            			}
-            			&lt;/script&gt;
-            			&lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
+<pre>&lt;script&gt;
+	var hollerConfig = {
+	host: "http://127.0.0.1",
+	port: "1337"
+}
+&lt;/script&gt;
+&lt;script type="text/javascript" src="PATH/TO/holler-client.min.js"&gt;&lt;/script&gt;</pre>
             		</p>
             		<p>
             			The hollerConfig object is optional. If it is not defined, the host will default to 127.0.0.1 and the port will default to 1337.
