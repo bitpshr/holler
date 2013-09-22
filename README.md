@@ -78,8 +78,7 @@ Holler.js uses [Grunt](http://gruntjs.com) for file linting and uglification. To
 
 ```bash
 git clone https://github.com/bitpshr/holler.git && cd holler
-git submodules update --recursive --init
-cd vendor/bootstrap && npm install && make bootstrap && cd ..
+git submodule update --recursive --init
 npm install
 # start a server at localhost (e.g. http://127.0.0.1)
 holler-server

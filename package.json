@@ -20,7 +20,7 @@
     "url": "http://github.com/bitpshr/holler/issues"
   },
   "devDependencies": {
-    "faye": "0.8.6",
+    "faye": "0.8.9",
     "grunt": "~0.4.0",
     "grunt-contrib-jshint": "~0.2.0",
     "grunt-contrib-uglify": "~0.1.2",
