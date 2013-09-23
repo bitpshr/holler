@@ -1,7 +1,7 @@
-[Holler.js](http://bitpshr.info/holler)
+[Holler.js](http://holler.bitpshr.net)
 =================
 
-real-time, in-app notifications and admin for web and mobile via the command line. [see it in action](http://bitpshr.info/holler)
+real-time, in-app notifications and admin for web and mobile via the command line. [see it in action](http://holler.bitpshr.net)
 
 ##Usage
 Sending notifications with Holler is as easy as four steps:
@@ -40,21 +40,21 @@ holler-server 1337
 Show notifications to all users currently using your app in real-time using <code>holler.js</code>. Notifications use <a href="http://fabien-d.github.com/alertify.js/">Alertify</a> so they look nice and sexy.
 * Log Messages
 
-![](http://bitpshr.info/holler/img/log.png)
+![](http://holler.bitpshr.net/img/log.png)
 ```console
 holler http://yourServerUrl:port log "This is a standard log message."
 ```
 
 * Success Messages
 
-![](http://bitpshr.info/holler/img/success.png)
+![](http://holler.bitpshr.net/img/success.png)
 ```console
 holler http://yourServerUrl:port success "This is a success message."
 ```
 
 * Error Messages
 
-![](http://bitpshr.info/holler/img/error.png)
+![](http://holler.bitpshr.net/img/error.png)
 ```console
 holler http://yourServerUrl:port error "This is an error message."
 ```
