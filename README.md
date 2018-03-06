@@ -15,7 +15,6 @@ Holler enables command-line powered [JavaScript push notifications](https://deve
 	const server = http.createServer().listen(1337);
 	new HollerServer(server);
 	```
-
 3. Include the client script as an ES6 module or as a script tag and create a new Holler Client.
 	```js
 	import HollerClient from '@bitpshr.net/holler/client';
@@ -26,11 +25,11 @@ Holler enables command-line powered [JavaScript push notifications](https://deve
 	<script src="node_modules/@bitpshr.net/holler/client.js"></script>
 	<script>new HollerClient('ws://localhost:1337');</script>
 	```
-
 4. Send [JavaScript push notifications](https://developer.mozilla.org/en-US/docs/Web/API/notification) using the `holler` CLI.
 	```sh
 	$ holler --url="ws://localhost:1337" --title="Hello" --body="Hello, world"
 	```
+	See all available CLI commands via `holler --help`.
 
 ## License
 
