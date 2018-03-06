@@ -3,10 +3,7 @@
   "version": "1.0.2",
   "description": "Holler enables command-line powered JavaScript push notifications.",
   "license": "WTFPL",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bitpshr/holler.git"
-  },
+  "repository": "github:bitpshr/holler",
   "scripts": {
     "eslint": "eslint **/*.{js,jsx}",
     "test": "jest --coverage --config=.jestrc.json",
