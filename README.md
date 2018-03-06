@@ -1,6 +1,7 @@
 ![Holler logo](logo.png?raw=true)
 
-Holler sends [desktop push notifications](https://developer.mozilla.org/en-US/docs/Web/API/notification) using [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and [push.js](https://github.com/Nickersoft/push.js/).
+
+Holler sends [desktop push notifications](https://developer.mozilla.org/en-US/docs/Web/API/notification) from the command line using [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API).
 
 [![npm version](https://badge.fury.io/js/%40bitpshr.net%2Fholler.svg)](https://badge.fury.io/js/%40bitpshr.net%2Fholler)
 
