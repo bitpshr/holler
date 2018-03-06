@@ -1,3 +1,0 @@
-[submodule "vendor/alertify"]
-	path = vendor/alertify
-	url = https://github.com/fabien-d/alertify.js.git
