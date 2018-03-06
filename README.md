@@ -34,6 +34,10 @@ Holler sends [desktop push notifications](https://developer.mozilla.org/en-US/do
 	```
 	See all available CLI commands via `holler --help`.
 
+## Demo
+
+![Holler demo](https://i.gyazo.com/c971f0ebd6190c6b32bb23800cb894be.gif)
+
 ## License
 
 [WTFPL](http://www.wtfpl.net/)
