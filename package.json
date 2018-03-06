@@ -1,16 +1,23 @@
 {
   "name": "@bitpshr.net/holler",
   "version": "1.1.0",
-  "description": "Holler enables command-line powered JavaScript push notifications.",
-  "license": "WTFPL",
+  "description": "Holler sends desktop push notifications from the command line.",
   "repository": "github:bitpshr/holler",
+  "license": "WTFPL",
+  "keywords": [
+    "express",
+    "holler",
+    "notifications",
+    "push",
+    "websockets"
+  ],
+  "bin": {
+    "holler": "./cli.js"
+  },
   "scripts": {
     "eslint": "eslint **/*.{js,jsx}",
     "test": "jest --coverage --config=.jestrc.json",
     "build": "rm -rf dist && webpack && cp package.json README.md dist/."
-  },
-  "bin": {
-    "holler": "./cli.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [
