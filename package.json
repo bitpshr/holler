@@ -1,6 +1,6 @@
 {
   "name": "@bitpshr.net/holler",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Holler enables command-line powered JavaScript push notifications.",
   "license": "WTFPL",
   "scripts": {
