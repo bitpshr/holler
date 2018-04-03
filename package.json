@@ -1,6 +1,6 @@
 {
   "name": "@bitpshr.net/holler",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Holler sends desktop push notifications from the command line.",
   "repository": "github:bitpshr/holler",
   "license": "WTFPL",
