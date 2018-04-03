@@ -15,7 +15,7 @@
     "holler": "./cli.js"
   },
   "scripts": {
-    "eslint": "eslint **/*.{js,jsx}",
+    "eslint": "eslint **/*.{js,jsx} --ignore-path .gitignore --quiet",
     "test": "jest --coverage --config=.jestrc.json",
     "build": "rm -rf dist && webpack && cp package.json README.md dist/.",
     "prettier": "prettier {**/*.{js,jsx},**/{!package,!package-lock}.json} --ignore-path .gitignore --write"
