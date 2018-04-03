@@ -18,16 +18,16 @@
     "eslint": "eslint **/*.{js,jsx} --ignore-path .gitignore --quiet",
     "test": "jest --coverage --config=.jestrc.json",
     "build": "rm -rf dist && webpack && cp package.json README.md dist/.",
-    "prettier": "prettier {**/*.{js,jsx},**/{!package,!package-lock}.json} --ignore-path .gitignore --write"
+    "prettier": "prettier **/*.{json,css,js,jsx} --write"
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --write --ignore-path .gitignore",
+      "prettier --write",
       "eslint",
       "git add"
     ],
-    "{!(package|package-lock),}.json": [
-      "prettier --write --ignore-path .gitignore",
+    "*.json": [
+      "prettier --write",
       "git add"
     ]
   },
