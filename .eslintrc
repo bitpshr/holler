@@ -12,7 +12,7 @@
 		"es6": true,
 		"jest": true
 	},
-	"extends": ["eslint:recommended"],
+	"extends": ["eslint:recommended", "prettier"],
 	"rules": {
 		"no-console": ["off"]
 	}
