@@ -1,6 +1,4 @@
 {
-	"roots": [],
-	"setupTestFrameworkScriptFile": null,
 	"coverageThreshold": {
 		"global": {
 			"branches": 100,

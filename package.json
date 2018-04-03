@@ -17,7 +17,8 @@
   "scripts": {
     "eslint": "eslint **/*.{js,jsx}",
     "test": "jest --coverage --config=.jestrc.json",
-    "build": "rm -rf dist && webpack && cp package.json README.md dist/."
+    "build": "rm -rf dist && webpack && cp package.json README.md dist/.",
+    "prettier": "prettier {**/*.{js,jsx},**/{!package,!package-lock}.json} --ignore-path .gitignore --write"
   },
   "lint-staged": {
     "*.{js,jsx}": [

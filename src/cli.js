@@ -5,14 +5,7 @@ const moment = require('moment');
 const WebSocket = require('ws');
 const yargs = require('yargs');
 
-const {
-	body,
-	icon,
-	link,
-	timeout,
-	title,
-	url
-} = yargs
+const { body, icon, link, timeout, title, url } = yargs
 	.option('b', {
 		alias: 'body',
 		describe: 'Notification body text',
@@ -52,15 +45,17 @@ const date = `\n\n${chalk.gray(moment().format('L hh:mmA'))}`;
 
 try {
 	socket.on('open', () => {
-		socket.send(JSON.stringify({
-			title,
-			config: {
-				body,
-				icon,
-				link,
-				timeout
-			}
-		}));
+		socket.send(
+			JSON.stringify({
+				title,
+				config: {
+					body,
+					icon,
+					link,
+					timeout
+				}
+			})
+		);
 		socket.close();
 		console.log(`${date} ${chalk.green('[SUCCESS]')} Notification delivered to ${url}.\n\n`);
 	});
